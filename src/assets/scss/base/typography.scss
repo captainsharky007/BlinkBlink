@@ -1,0 +1,108 @@
+// @import url('https://fonts.googleapis.com/css?family=Raleway:700');
+
+body {
+    font-family: 'Inter UI', sans-serif;
+    color: $dark;
+    font-size: 1.5rem;
+    letter-spacing: -.5px;
+}
+
+// p {
+//     color: $gray-darker;
+// }
+
+//   h1,.h1,
+//   h2,.h2,
+//   h3,.h3,
+//   h4,.h4,
+//   h5,.h5,
+//   h6,.h6 {
+//       //color: $dark;
+//       font-family: 'Raleway', sans-serif;
+//   }
+
+.safe-body {
+    max-width: 750px;
+}
+.display-4 {
+    font-weight: bold;
+    font-size: 2.75rem;
+    line-height: 3rem;
+}
+
+h1,
+.h1 {
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: -.5px;
+    line-height: 2.5rem;
+}
+
+h2,
+.h2 {
+    font-weight: bold;
+    letter-spacing: -.5px;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+
+h3,
+.h3 {
+    font-weight: bold;
+    font-size: 1.25rem;
+    line-height: 2.5rem;
+}
+
+.body-small {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    //letter-spacing: 0.5px;
+}
+
+.body-small,
+.body-large,
+.subtitle, {
+    max-width: 750px;
+}
+
+small {
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+   // letter-spacing: 0.6px;
+}
+p, small {
+    color:$gray;
+}
+
+
+
+// @include media-breakpoint-down(xs) {
+
+//     h1,
+//     .h1 {
+//         font-size: 10vw;
+//         line-height: 12vw;
+//         letter-spacing: -2.0px;
+//     }
+
+//     h2,
+//     .h2 {
+//         font-size: 10vw;
+//         line-height: 12vw;
+//         letter-spacing: -2px;
+//     }
+
+//     h3,
+//     .h3 {
+//         font-size: 7vw;
+//         line-height: 9vw;
+//         letter-spacing: -1px;
+//     }
+// }
+
+.sub-heading {
+    font-weight:400;
+    letter-spacing:-.5px;
+}

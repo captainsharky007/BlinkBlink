@@ -1,0 +1,33 @@
+// Base
+@import "base/variables";
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "base/colors";
+
+
+// Components
+@import "components/buttons";
+@import "components/footers";
+@import "components/navs";
+@import "components/panels";
+@import "components/players";
+@import "components/maps";
+
+// Elements
+@import "elements/forms";
+@import "elements/lists";
+@import "elements/tables";
+
+// Layouts
+@import "layouts/home";
+@import "layouts/globals";
+@import "layouts/spacers";
+
+@import "base/typography";
+
+// utils
+
+@import "utils/shadows";
+
+#__bs_script__, #__bs_notify__ {
+  display: none !important;
+}
