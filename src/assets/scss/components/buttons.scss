@@ -1,5 +1,6 @@
 .btn {
     font-size: $font-size-base * .9375;
+    color:$light;
   border-radius: 8px;
   border:none;
     &:hover,
@@ -11,7 +12,7 @@
 
 .btn-lg {
     font-size: 20px;
-    padding:11px 15px;
+    padding:11px 32px;
     letter-spacing: 0px;
     font-weight: bold;
 }

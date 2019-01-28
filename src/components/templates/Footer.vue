@@ -1,12 +1,38 @@
 <template>
-  <footer class="footer mt-auto pb-48 pt-32 py-lg-48 bg-light">
-    <div class="container px-sm-0">
-      <div class="row text-center">
-        <div class="col-12 col-sm-auto mb-sm-48 mb-1">
-          <span class="text-muted mr-sm-32">© 2019 by Jevgenijs Zaremba.</span>
+  <footer class="bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col offset-md-1">
+          <router-link to="/" exact>
+            <img
+              class="mt-32 mb-64"
+              src="~@/assets/img/blink-blink-gray.svg"
+              alt="BlinkBlink Eye training application"
+            >
+          </router-link>
         </div>
-        <div class="col-12 col-sm-auto ml-auto">
-          <a class="btn btn-link text-primary pr-0 p-0" v-on:click="scrollToTop">Back to top ↑</a>
+      </div>
+      <div class="row">
+        <div class="col offset-md-1 text-white">
+          <a
+            href="mailto:hello@blinkblink.app"
+            class="h3 mb-32 mb-md-16 d-md-inline-block d-block mr-32 text-white"
+            style="font-size:1rem; line-height:20px;"
+          >Contact Us</a>
+          <h3
+            class="d-block mb-32 mb-md-16 d-md-inline-block mr-32"
+            style="font-size:1rem; line-height:20px;"
+          >
+            <router-link class="text-white" to="/privacy" exact>Privacy policy</router-link>
+          </h3>
+          <h3 class="mb-32 mb-md-16 d-md-inline-block" style="font-size:1rem; line-height:20px;">
+            <router-link class="text-white" to="/terms" exact>Terms and conditions</router-link>
+          </h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col mb-16 mb-md-24 offset-md-1">
+          <small>© 2019 blink blink app</small>
         </div>
       </div>
     </div>
@@ -23,9 +49,9 @@ export default {
           window.requestAnimationFrame(scrollToTop);
           window.scrollTo(0, c - c / 8);
         }
-      }
+      };
       scrollToTop();
     }
   }
-}
+};
 </script>

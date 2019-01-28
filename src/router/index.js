@@ -4,8 +4,9 @@ import BootstrapVue from 'bootstrap-vue'
 
 import Home from '@/components/pages/Home'
 import Terms from '@/components/pages/Terms'
-import Contact from '@/components/pages/Contact'
 import Style from '@/components/pages/Style'
+import Privacy from '@/components/pages/Privacy'
+import Buy from '@/components/pages/Buy'
 
 import 'bootstrap/js/dist/dropdown'
 import 'bootstrap/js/dist/collapse'
@@ -44,9 +45,19 @@ export default new Router({
       }
     },
     {
-      path: '/contact',
-      name: 'Contact',
-      component: Contact
+      path: '/terms',
+      name: 'Terms',
+      component: Terms
+    },
+    {
+      path: '/privacy',
+      name: 'Privacy',
+      component: Privacy
+    },
+    {
+      path: '/buy',
+      name: 'Buy',
+      component: Buy
     },
     {
       path: '/style',
