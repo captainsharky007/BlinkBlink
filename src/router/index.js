@@ -7,6 +7,7 @@ import Terms from '@/components/pages/Terms'
 import Style from '@/components/pages/Style'
 import Privacy from '@/components/pages/Privacy'
 import Buy from '@/components/pages/Buy'
+import Thanks from '@/components/pages/Thanks'
 
 import 'bootstrap/js/dist/dropdown'
 import 'bootstrap/js/dist/collapse'
@@ -24,6 +25,12 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home,
+      
+    },
+    {
+      path: '/thanks',
+      name: 'Thanks',
+      component: Thanks,
       
     },
     {
