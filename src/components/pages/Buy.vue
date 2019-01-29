@@ -20,16 +20,25 @@
             >We are still working hard on building the app. Please leave your email below to find out when it's released.</p>
             <div class="input-group input-group-lg pr-md-128">
               <input
+                id="email"
                 type="email"
                 class="form-control"
                 placeholder="Enter your email"
                 aria-label="Email"
               >
             </div>
+             <div id="error" style="display:none;">
+              <small class="text-danger">This email is not valid.</small>
+            </div>
             <div class="d-block mb-32">
               <small>Psst. Our first 500 users will get a cool bonus.</small>
             </div>
-            <a class="btn btn-lg btn-block-xs btn-primary" href="#" role="button">Sign up</a>
+            <button
+            id="btn"
+              class="btn btn-lg btn-block-xs btn-primary"
+              v-on:click="submitEmail"
+              role="button"
+            >Sign up</button>
           </div>
           <div class="col-12 col-md-4 mb-md-64 mt-16 d-none d-md-block">
             <img
@@ -92,9 +101,39 @@
 
 <script>
 import Footer from "@/components/templates/Footer";
+import router from "@/router";
 export default {
   components: {
     Footer
+  },
+  methods: {
+    submitEmail: function() {
+      var email = $("#email").val();
+      var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if (regex.test(email)) {
+        $('#btn').attr('disabled',true);
+        var navigate = this.$router;
+        $.ajax({
+          url:
+            "https://us-central1-blinkblink-6aa01.cloudfunctions.net/addSubscriber/" +
+            email
+        })
+          .done(function(data) {
+            navigate.push({ path: "thanks" });
+          })
+          .fail(function() {
+           $('#btn').attr('disabled',false);
+            console.log("Failed");
+          });
+      } else {
+        $('#btn').attr('disabled',false);
+         $('#email').on('input propertychange', function(){
+              $('#error').hide();
+            });
+            $('#error').show();
+        console.log("Enter right email");
+      }
+    }
   }
 };
 </script>

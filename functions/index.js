@@ -15,48 +15,66 @@
  */
 'use strict';
 
+// link https://us-central1-blinkblink-6aa01.cloudfunctions.net/addSubscriber/ssss@zaremba.lv
+
+
 const functions = require('firebase-functions');
-const nodemailer = require('nodemailer');
-// Configure the email transport using the default SMTP transport and a GMail account.
-// For other types of transports such as Sendgrid see https://nodemailer.com/transports/
-// TODO: Configure the `gmail.email` and `gmail.password` Google Cloud environment variables.
-const gmailEmail = functions.config().gmail.email;
-const gmailPassword = functions.config().gmail.password;
-const mailTransport = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: gmailEmail,
-    pass: gmailPassword,
-  },
+const cors = require('cors')({
+  origin: true
 });
 
-// Sends an email confirmation when a user changes his mailing list subscription.
-exports.sendEmailConfirmation = functions.database.ref('/subscribers/{uid}').onWrite(async (change) => {
-  const snapshot = change.after;
-  const val = snapshot.val();
+exports.addSubscriber = functions.https.onRequest((req, res) => {
 
-  if (!snapshot.changed('subscribedToMailingList')) {
-    return null;
-  }
+  cors(req, res, () => {
 
-  const mailOptions = {
-    from: '"Spammy Corp." <noreply@firebase.com>',
-    to: val.email,
-  };
+    const Mailchimp = require('mailchimp-api-v3')
+    const mailchimp = new Mailchimp('2a8fff2d6d5182abbbf66a85a03dc22e-us20');
 
-  const subscribed = val.subscribedToMailingList;
+    mailchimp.post('/lists/bc68dd7490/members', {
+        "email_address": req.url.split("/")[1],
+        "status": "pending"
+      }).then(function (results) {
+        res.status(200).send('');
+      })
+      .catch(function (err) {
+        console.log(err);
+        res.status(500).send('');
+      })
+    return null
+  });
 
-  // Building Email message.
-  mailOptions.subject = subscribed ? 'Thanks and Welcome!' : 'Sad to see you go :`(';
-  mailOptions.text = subscribed ?
-      'Thanks you for subscribing to our newsletter. You will receive our next weekly newsletter.' :
-      'I hereby confirm that I will stop sending you the newsletter.';
-  
-  try {
-    await mailTransport.sendMail(mailOptions);
-    console.log(`New ${subscribed ? '' : 'un'}subscription confirmation email sent to:`, val.email);
-  } catch(error) {
-    console.error('There was an error while sending the email:', error);
-  }
-  return null;
+});
+
+exports.getSubs = functions.https.onRequest((req, res) => {
+  cors(req, res, () => {
+
+    const Mailchimp = require('mailchimp-api-v3')
+    const mailchimp = new Mailchimp('2a8fff2d6d5182abbbf66a85a03dc22e-us20');
+
+    mailchimp.get('lists/bc68dd7490/members').then(function (results) {
+        var list = {
+          members: []
+        };
+        for (var key in results.members) {
+          var member = results.members[key];
+          if (!member.email_address.match('zaremba.lv')) {
+            list.members.push({
+              "email": member.email_address,
+              "status": member.status,
+              "last_changed": member.last_changed
+            })
+          }
+
+        }
+        list.totalLength = list.members.length;
+        list = JSON.stringify(list, null, 2)
+        res.status(200).send(list);
+      })
+      .catch(function (err) {
+        console.log(err);
+        res.status(500).send('');
+      })
+    return null
+  });
+
 });

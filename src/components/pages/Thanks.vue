@@ -11,7 +11,7 @@
               >
             </router-link>
             <h1 class="display-4 mb-16 mb-md-32 mt-64">Thank you!</h1>
-            <p>We will contact you when app will be ready.</p>
+            <p>Please confirm your email. We will let you know when the app is launched.</p>
           </div>
         </div>
       </div>
