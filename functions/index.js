@@ -28,7 +28,7 @@ exports.addSubscriber = functions.https.onRequest((req, res) => {
   cors(req, res, () => {
 
     const Mailchimp = require('mailchimp-api-v3')
-    const mailchimp = new Mailchimp('2a8fff2d6d5182abbbf66a85a03dc22e-us20');
+    const mailchimp = new Mailchimp(functions.config().mailchimp.key);
 
     mailchimp.post('/lists/bc68dd7490/members', {
         "email_address": req.url.split("/")[1],
@@ -49,7 +49,7 @@ exports.getSubs = functions.https.onRequest((req, res) => {
   cors(req, res, () => {
 
     const Mailchimp = require('mailchimp-api-v3')
-    const mailchimp = new Mailchimp('2a8fff2d6d5182abbbf66a85a03dc22e-us20');
+    const mailchimp = new Mailchimp(functions.config().mailchimp.key);
 
     mailchimp.get('lists/bc68dd7490/members').then(function (results) {
         var list = {

@@ -13,5 +13,8 @@ new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  data: {
+    currency: 'Hello Vue!'
+  }
 })

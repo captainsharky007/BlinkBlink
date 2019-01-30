@@ -1,6 +1,6 @@
 <template>
   <main class="bg-light">
-        <div class="position-relative">
+    <div class="position-relative">
       <img
         class="position-absolute d-none d-lg-block"
         style="right:0; bottom:0px; height:100%;"
@@ -11,17 +11,17 @@
         <div class="row">
           <div class="col-12 col-md-5 offset-md-1 mt-16 mb-md-96">
             <router-link to="/" exact>
-            <img
-              id="logo"
-              src="~@/assets/img/blink-blink-dark.svg"
-              alt="BlinkBlink Eye training application"
-            >
-          </router-link>
+              <img
+                id="logo"
+                src="~@/assets/img/blink-blink-dark.svg"
+                alt="BlinkBlink Eye training application"
+              >
+            </router-link>
             <h1 class="display-4 mb-16 mb-md-32 mt-64">Learn to take care of your eyes.</h1>
             <p
               class="mb-24"
             >Reduce eyestrain, dry eyes and headaches with guided eye relaxation exercises.</p>
-            <h2 class="mb-32">Only €4.99 per year.</h2>
+            <h2 class="mb-32">Only {{currency}}4.99 per year.</h2>
             <router-link class="btn btn-lg btn-block-xs btn-primary" to="/buy" role="button">Buy now</router-link>
           </div>
 
@@ -33,7 +33,7 @@
     </div>
     <hr class="d-none d-md-block m-0">
 
-    <div class="container">
+    <div id="eye-training-benefits" class="container">
       <div class="row mt-64">
         <div class="col col-md-6 offset-md-1 mt-md-64 mr-md-48">
           <h2
@@ -100,7 +100,7 @@
         style="right:0;top:-50px;"
         src="~@/assets/img/fig-leaf-3.png"
       >
-      <div class="container text-white mb-64">
+      <div id="eye-exercise-app" class="container text-white mb-64">
         <div class="row pt-md-64">
           <div class="col-12 col-md-6 offset-md-1 mr-md-48">
             <h1 class="mt-64 mb-16 display-3 mt-md-64 text-light">Your personal eye
@@ -128,7 +128,7 @@
         style="left:0; bottom:-150px;"
         src="~@/assets/img/fig-leaf-2.png"
       >
-      <div class="container">
+      <div id="grow-habit" class="container">
         <div class="row mt-64">
           <div class="col col-md-6 offset-md-1 mt-md-64 mr-md-48">
             <h2 class="mb-16 display-3">Grow the habit.
@@ -151,7 +151,7 @@
       </div>
     </div>
 
-    <div class="container">
+    <div id="stay-motivated" class="container">
       <div class="row">
         <div class="col offset-md-1">
           <h2
@@ -200,7 +200,7 @@
         style="top:-150px; right:0;"
         src="~@/assets/img/fig-leaf-3.png"
       >
-      <div class="container py-64">
+      <div id="start-now" class="container py-64">
         <div class="row">
           <div class="col offset-md-1">
             <h1 class="d-md-none display-4 mb-32">Give your eyes a break. Start today.</h1>
@@ -208,7 +208,10 @@
               <h1 class="display-3">Give your eyes a break.</h1>
               <h1 class="display-3 mb-32">Start today.</h1>
             </div>
-            <h2 class="mb-32">Only €4.99 per year.</h2>
+            <h2 class="mb-32">
+              Only {{currency}}4.99
+              per year.
+            </h2>
             <router-link class="btn btn-lg btn-block-xs btn-primary" to="/buy" role="button">Buy now</router-link>
           </div>
         </div>
@@ -233,7 +236,7 @@
         </div>
       </div>
     </div>
-   <Footer></Footer>
+    <Footer></Footer>
   </main>
 </template>
 
@@ -282,9 +285,20 @@
 
 <script>
 import Footer from "@/components/templates/Footer";
+import axios from "axios";
 export default {
   components: {
     Footer
+  },
+  data() {
+    return {
+      currency: "$"
+    };
+  },
+  beforeMount() {
+    axios
+      .get("https://ipinfo.io")
+      .then(response => (this.currency = response.country == "US" ? "$" : "€"));
   }
 };
 </script>

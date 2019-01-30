@@ -69,6 +69,12 @@ import Footer from "@/components/templates/Footer";
 export default {
   components: {
     Footer
+  },
+  beforeMount() {
+    // Event snippet for Signed up to waitlist conversion page
+    gtag("event", "conversion", {
+      send_to: "AW-765958877/u4URCMnb_JMBEN21nu0C"
+    });
   }
 };
 </script>
