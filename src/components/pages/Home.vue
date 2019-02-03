@@ -89,6 +89,35 @@
       </div>
     </div>
 
+    <div class="bg-dark how-it-works">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 offset-md-1 mt-md-64 mr-md-48">
+            <h1 class="mt-64 mb-24 display-3 mt-md-64 text-light">How it works.</h1>
+          </div>
+           <div class="d-flex mb-16 col-12 col-lg-3 offset-md-1 align-items-start">
+              <img class="mr-32 mt-2" src="~@/assets/img/icons/download.svg" alt="Download">
+              <h2 class="mt-16 text-light">Download application
+              </h2>
+            </div>
+            <div class="d-flex mb-16 col-12 col-lg-3 offset-md-1 offset-lg-0 align-items-start">
+              <img class="mr-32 mt-2" src="~@/assets/img/icons/time.svg" alt="Reminders">
+              <h2 class="mt-16 text-light">Set reminders and intervals
+              </h2>
+            </div>
+            <div class="d-flex mb-32 col-12 col-lg-3 offset-md-1 align-items-start offset-lg-0">
+              <img class="mr-32 mt-2" src="~@/assets/img/icons/circulate.svg" alt="Flex">
+              <h2 class="mt-16 text-light">Follow exercise instructions
+              </h2>
+            </div>
+            <div class="col-12">
+  <router-link class="btn btn-lg btn-block-xs btn-primary mb-64 mb-lg-128  offset-md-1" to="/buy" role="button">Buy now</router-link>
+            </div>
+           
+        </div>
+      </div>
+    </div>
+
     <div class="bg-primary position-relative">
       <img
         class="position-absolute d-none d-lg-block"
@@ -193,8 +222,26 @@
         </div>
       </div>
     </div>
+    <div class="container">
+      <div class="row">
+        <div class="col offset-md-1">
+          <h2 class="text-gray mb-16">Can eye exercises
+            <br class="d-md-none">improve vision?
+          </h2>
+          <p
+            class="body-small"
+          >There is a lot of debate as to whether eye exercises can really improve your vision.</p>
+          <p
+            class="body-small"
+          >There aren’t any scientific studies that show eye exercises can successfully restore your vision, but there’s a lot of hearsay evidence to the contrary, with countless people saying exercises have significantly improved their eyesight.</p>
+          <p
+            class="body-small mb-64 mb-md-128"
+          >It's possible, that poor vision, headaches and dry eyes might be a sign of another medical condition that requires treatment. This is something that eye relaxation cannot account for, so please visit your doctor first.</p>
+        </div>
+      </div>
+    </div>
 
-    <div class="bg-dark text-light mb-64 mb-md-128 position-relative">
+    <div class="bg-dark text-light position-relative">
       <img
         class="position-absolute d-none d-lg-block"
         style="top:-150px; right:0;"
@@ -218,30 +265,13 @@
       </div>
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col offset-md-1">
-          <h2 class="text-gray mb-16">Can eye exercises
-            <br class="d-md-none">improve vision?
-          </h2>
-          <p
-            class="body-small"
-          >There is a lot of debate as to whether eye exercises can really improve your vision.</p>
-          <p
-            class="body-small"
-          >There aren’t any scientific studies that show eye exercises can successfully restore your vision, but there’s a lot of hearsay evidence to the contrary, with countless people saying exercises have significantly improved their eyesight.</p>
-          <p
-            class="body-small mb-64 mb-md-128"
-          >It's possible, that poor vision, headaches and dry eyes might be a sign of another medical condition that requires treatment. This is something that eye relaxation cannot account for, so please visit your doctor first.</p>
-        </div>
-      </div>
-    </div>
     <Footer></Footer>
   </main>
 </template>
 
 <style>
-.benefit > h2 {
+.benefit > h2,
+.how-it-works h2 {
   line-height: initial;
 }
 
