@@ -298,7 +298,7 @@ export default {
   beforeMount() {
     axios
       .get("https://ipinfo.io")
-      .then(response => (this.currency = response.country == "US" ? "$" : "€"));
+      .then(response => (this.currency = response.country == "US" ? "$" : "$"));
   }
 };
 </script>
