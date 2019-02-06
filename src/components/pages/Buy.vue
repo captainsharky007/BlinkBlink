@@ -123,7 +123,6 @@ export default {
           })
           .fail(function() {
            $('#btn').attr('disabled',false);
-            console.log("Failed");
           });
       } else {
         $('#btn').attr('disabled',false);
@@ -131,7 +130,6 @@ export default {
               $('#error').hide();
             });
             $('#error').show();
-        console.log("Enter right email");
       }
     }
   }

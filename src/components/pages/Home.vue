@@ -21,7 +21,12 @@
             <p
               class="mb-24"
             >Reduce eyestrain, dry eyes and headaches with guided eye relaxation exercises.</p>
-            <h2 class="mb-32">Only {{currency}}4.99 per year.</h2>
+            <h2 class="text-primary mb-0">Limited offer</h2>
+            <h2 class="mb-0">
+              <span style="text-decoration: line-through; opacity:.5;">{{currency}}16.99</span>
+              {{currency}}4.99
+            </h2>
+            <p class="mb-32">Only 3 days left.</p>
             <router-link class="btn btn-lg btn-block-xs btn-primary" to="/buy" role="button">Buy now</router-link>
           </div>
 
@@ -31,7 +36,22 @@
         </div>
       </div>
     </div>
-    <hr class="d-none d-md-block m-0">
+    <!-- <hr class="d-none d-md-block m-0"> -->
+    <div class="bg-dark">
+      <div class="container">
+        <div class="row text-center py-64">
+          <div class="col-12 col-sm-4 mb-48 mb-sm-0">
+            <img src="~@/assets/img/guardian.svg" alt="Guardian">
+          </div>
+          <div class="col-12 col-sm-4 mb-48 mb-sm-0">
+            <img src="~@/assets/img/life.svg" alt="iPhone life">
+          </div>
+          <div class="col-12 col-sm-4 mb-sm-0">
+            <img src="~@/assets/img/forbes.svg" alt="Forbes">
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div id="eye-training-benefits" class="container">
       <div class="row mt-64">
@@ -95,25 +115,25 @@
           <div class="col-12 offset-md-1 mt-md-64 mr-md-48">
             <h1 class="mt-64 mb-24 display-3 mt-md-64 text-light">How it works.</h1>
           </div>
-           <div class="d-flex mb-16 col-12 col-lg-3 offset-md-1 align-items-start">
-              <img class="mr-32 mt-2" src="~@/assets/img/icons/download.svg" alt="Download">
-              <h2 class="mt-16 text-light">Download application
-              </h2>
-            </div>
-            <div class="d-flex mb-16 col-12 col-lg-3 offset-md-1 offset-lg-0 align-items-start">
-              <img class="mr-32 mt-2" src="~@/assets/img/icons/time.svg" alt="Reminders">
-              <h2 class="mt-16 text-light">Set reminders and intervals
-              </h2>
-            </div>
-            <div class="d-flex mb-32 col-12 col-lg-3 offset-md-1 align-items-start offset-lg-0">
-              <img class="mr-32 mt-2" src="~@/assets/img/icons/circulate.svg" alt="Flex">
-              <h2 class="mt-16 text-light">Follow exercise instructions
-              </h2>
-            </div>
-            <div class="col-12">
-  <router-link class="btn btn-lg btn-block-xs btn-primary mb-64 mb-lg-128  offset-md-1" to="/buy" role="button">Buy now</router-link>
-            </div>
-           
+          <div class="d-flex mb-16 col-12 col-lg-3 offset-md-1 align-items-start">
+            <img class="mr-32 mt-2" src="~@/assets/img/icons/download.svg" alt="Download">
+            <h2 class="mt-16 text-light">Download application</h2>
+          </div>
+          <div class="d-flex mb-16 col-12 col-lg-3 offset-md-1 offset-lg-0 align-items-start">
+            <img class="mr-32 mt-2" src="~@/assets/img/icons/time.svg" alt="Reminders">
+            <h2 class="mt-16 text-light">Set reminders and intervals</h2>
+          </div>
+          <div class="d-flex mb-32 col-12 col-lg-3 offset-md-1 align-items-start offset-lg-0">
+            <img class="mr-32 mt-2" src="~@/assets/img/icons/circulate.svg" alt="Flex">
+            <h2 class="mt-16 text-light">Follow exercise instructions</h2>
+          </div>
+          <div class="col-12">
+            <router-link
+              class="btn btn-lg btn-block-xs btn-primary mb-64 mb-lg-128 offset-md-1"
+              to="/buy"
+              role="button"
+            >Buy now</router-link>
+          </div>
         </div>
       </div>
     </div>
@@ -221,7 +241,65 @@
           </div>
         </div>
       </div>
+      <div class="row mb-64 mb-sm-128">
+        <div class="col-12 col-md-4 mb-24">
+          <div class="card shadow">
+            <div class="card-body">
+              <div class="mb-16">
+                <img src="~@/assets/img/Star.svg" alt="Rating">
+                <img src="~@/assets/img/Star.svg" alt="Rating">
+                <img src="~@/assets/img/Star.svg" alt="Rating">
+                <img src="~@/assets/img/Star.svg" alt="Rating">
+                <img src="~@/assets/img/Star.svg" alt="Rating">
+              </div>
+
+              <p
+                class="card-text"
+              >I am 74 years old. Great product... can't believe the difference it makes. Highly recommended this product!</p>
+              <h5 class="card-title mb-0">Anonymous</h5>
+              <small>1 day ago</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 mb-24">
+          <div class="card shadow">
+            <div class="card-body">
+              <div class="mb-16">
+                <img src="~@/assets/img/Star.svg" alt="Rating">
+                <img src="~@/assets/img/Star.svg" alt="Rating">
+                <img src="~@/assets/img/Star.svg" alt="Rating">
+                <img src="~@/assets/img/Star.svg" alt="Rating">
+                <img src="~@/assets/img/Star.svg" alt="Rating">
+              </div>
+
+              <p
+                class="card-text"
+              >I've had the application recently and I'm still trying it out. So far I am completely satisfied with the purchase, as the vision is definitely improved.</p>
+              <h5 class="card-title mb-0">Serkan Gürses</h5>
+              <small>1 week ago</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card shadow">
+            <div class="card-body">
+              <div class="mb-16">
+                <img src="~@/assets/img/Star.svg" alt="Rating">
+                <img src="~@/assets/img/Star.svg" alt="Rating">
+                <img src="~@/assets/img/Star.svg" alt="Rating">
+                <img src="~@/assets/img/Star.svg" alt="Rating">
+                <img src="~@/assets/img/Star.svg" alt="Rating">
+              </div>
+
+              <p class="card-text">Easy to notice the difference. Great application.</p>
+              <h5 class="card-title mb-0">Claudio Daniele</h5>
+              <small>1 month ago</small>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
     <div class="container">
       <div class="row">
         <div class="col offset-md-1">
@@ -240,6 +318,68 @@
         </div>
       </div>
     </div>
+    <!-- Mobile -->
+    <div class="bg-primary d-sm-none">
+      <div class="container">
+        <div class="row">
+          <div class="col-12" style="background:#F8F4F3;">
+            <h1 class="my-64">Expert review</h1>
+          </div>
+          <div class="col optometrist">
+            <div class="spacer"></div>
+            <div class="card shadow" style="margin-bottom:-56px; top:-50px;">
+              <div class="card-body">
+                <img src="~@/assets/img/quote.svg" alt="Quote">
+                <p
+                  class="card-text mt-24"
+                >BlinkBlink is probably the best way how to create habit to relax your eyes.</p>
+                <h5 class="card-title mb-0">Serkan Gürses</h5>
+                <small>Optometrist</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Desktop -->
+    <div class="bg-primary d-none d-sm-block">
+      <div class="container">
+        <div class="row position-relative pt-sm-128">
+          <div class="col-12 offset-md-1">
+            <h1 class="mb-64 text-light">Expert review</h1>
+          </div>
+          <div class="col-5 offset-md-1">
+            <img src="~@/assets/img/doctor.png" alt="Optometrist">
+          </div>
+          <div class="col-5">
+            <div class="card shadow position-absolute" style="bottom:128px;">
+              <div class="card-body">
+                <img src="~@/assets/img/quote.svg" alt="Quote">
+                <p
+                  class="card-text mt-24"
+                >BlinkBlink is probably the best way how to create habit to relax your eyes.</p>
+                <h5 class="card-title mb-0">Christopher Thompson</h5>
+                <small>Optometrist</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-primary">
+      <div class="container pb-64 pt-128">
+        <div class="row">
+          <div class="col offset-md-1">
+            <h1 class="text-light display-4 mb-24">14 day
+              <br>money-back
+              <br>guarentee.
+            </h1>
+            <p class="text-light">Don’t like the app? Get full refund. No questions asked.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="bg-dark text-light position-relative">
       <img
@@ -255,10 +395,12 @@
               <h1 class="display-3">Give your eyes a break.</h1>
               <h1 class="display-3 mb-32">Start today.</h1>
             </div>
-            <h2 class="mb-32">
-              Only {{currency}}4.99
-              per year.
+            <h2 class="text-primary mb-0">Limited offer</h2>
+            <h2 class="mb-0">
+              <span style="text-decoration: line-through; opacity:.5;">{{currency}}16.99</span>
+              {{currency}}4.99
             </h2>
+            <p class="mb-32">Only 3 days left.</p>
             <router-link class="btn btn-lg btn-block-xs btn-primary" to="/buy" role="button">Buy now</router-link>
           </div>
         </div>
@@ -266,10 +408,82 @@
     </div>
 
     <Footer></Footer>
+    <div class="modal" tabindex="-1" role="dialog" id="popup">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="container">
+            <div class="row text-center" id="success" style="display:none;">
+              <p class="px-48 pt-48 w-100">Check your email!</p>
+              <button
+                  type="button"
+                  class="btn btn-primary btn-lg mb-32 mx-auto"
+                  data-dismiss="modal"
+                >Close
+                </button>
+            </div>
+            <div class="row" id="form">
+              <div class="position-absolute p-24" style="right:0px; z-index:1;">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <img src="~@/assets/img/close.svg" alt="Close">
+                </button>
+              </div>
+
+              <div class="col-12 col-sm-6 p-32">
+                <h1>Get free e-book. Start today.</h1>
+                <p>Some short description about this ebook.</p>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    class="form-control form-control-lg"
+                    id="pdfemail"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter your email"
+                  >
+                  <div id="pdferror" style="display:none;">
+                    <small class="text-danger">This email is not valid.</small>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  id="pdfbtn"
+                  v-on:click="submitEmail"
+                  class="btn btn-primary btn-block btn-lg"
+                >Get free e-book</button>
+                <button
+                  type="button"
+                  class="btn text-dark text-center btn-block"
+                  data-dismiss="modal"
+                >Not interested</button>
+              </div>
+              <div class="bg-primary col-12 col-sm-6 d-flex align-items-center">
+                <img
+                  class="p-24"
+                  width="100%"
+                  height="auto"
+                  src="~@/assets/img/freepdf.png"
+                  alt="Free pdf"
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 </template>
 
 <style>
+.optometrist {
+  background-image: url("~@/assets/img/doctor.png");
+  /* background-size:cover; */
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.spacer {
+  height: 90vw;
+}
+
 .benefit > h2,
 .how-it-works h2 {
   line-height: initial;
@@ -315,6 +529,7 @@
 
 <script>
 import Footer from "@/components/templates/Footer";
+import bootstrap from "bootstrap/js/dist/modal";
 import axios from "axios";
 export default {
   components: {
@@ -325,10 +540,68 @@ export default {
       currency: "$"
     };
   },
+  methods: {
+    test: function() {
+      $("#popup").modal("toggle");
+    },
+    submitEmail: function() {
+      console.log(123);
+      var email = $("#pdfemail").val();
+      var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if (regex.test(email)) {
+        $("#pdfbtn").attr("disabled", true);
+        var navigate = this.$router;
+        $.ajax({
+          url:
+            "https://us-central1-blinkblink-6aa01.cloudfunctions.net/addSubscriber/" +
+            email
+        })
+          .done(function(data) {
+            $('#form').hide();
+            $('#success').show();
+            console.log("Success!");
+          })
+          .fail(function() {
+            $("#pdfbtn").attr("disabled", false);
+          });
+      } else {
+        $("#pdfbtn").attr("disabled", false);
+        $("#pdfemail").on("input propertychange", function() {
+          $("#pdferror").hide();
+        });
+        $("#pdferror").show();
+      }
+    }
+  },
   beforeMount() {
     axios
       .get("https://ipinfo.io")
       .then(response => (this.currency = response.country == "US" ? "$" : "$"));
+  },
+  mounted() {
+    var popupShowed = false;
+
+    $("body").mouseleave(function() {
+      if (!popupShowed && document.body.clientWidth > 1000) {
+        $("#popup").modal("toggle");
+        popupShowed = true;
+      }
+    });
+
+    if (!popupShowed) {
+      window.onscroll = function(event) {
+        var height = document.body.scrollHeight;
+        if (
+          !popupShowed &&
+          (document.body.clientWidth < 999 &&
+            15 < height / (height - this.scrollY))
+        ) {
+          console.log(height / (height - this.scrollY));
+          popupShowed = true;
+          $("#popup").modal("toggle");
+        }
+      };
+    }
   }
 };
 </script>
