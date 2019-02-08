@@ -125,7 +125,7 @@
           </div>
           <div class="d-flex mb-32 col-12 col-lg-3 offset-md-1 align-items-start offset-lg-0">
             <img class="mr-32 mt-2" src="~@/assets/img/icons/circulate.svg" alt="Flex">
-            <h2 class="mt-16 text-light">Follow exercise instructions</h2>
+            <h2 class="mt-16 text-light">Follow exercise guide</h2>
           </div>
           <div class="col-12">
             <router-link
@@ -334,7 +334,7 @@
                   class="card-text mt-24"
                 >BlinkBlink application is probably the easiest and best way how to create a habit to relax your eyes.</p>
                 <h5 class="card-title mb-0">Serkan Gürses</h5>
-                <small>Optometrist</small>
+                <small>Ophthalmologist</small>
               </div>
             </div>
           </div>
@@ -375,7 +375,8 @@
               <br>money-back
               <br>guarentee.
             </h1>
-            <p class="text-light">Don’t like the app? Get full refund. No questions asked.</p>
+            <p class="text-light">If you don’t like the app, we’ll grant you a full refund.
+               <br class="d-none d-lg-block"> No questions asked.</p>
           </div>
         </div>
       </div>
@@ -429,8 +430,8 @@
               </div>
 
               <div class="col-12 col-sm-6 p-32">
-                <h1>Free PDF<br>e-book.</h1>
-                <p>Get free exercises with illustrations and descriptions.</p>
+                <h1>Get a free <br>PDFeBook.</h1>
+                <p>Packed with free illustrated eye exercises. Just enough to get you started.</p>
                 <div class="form-group">
                   <input
                     type="email"
@@ -448,12 +449,12 @@
                   id="pdfbtn"
                   v-on:click="submitEmail"
                   class="btn btn-primary btn-block btn-lg"
-                >Get free e-book</button>
+                >Get a free eBook</button>
                 <button
                   type="button"
                   class="btn text-dark text-center btn-block"
                   data-dismiss="modal"
-                >Not interested</button>
+                >No, thanks</button>
               </div>
               <div class="bg-primary col-12 col-sm-6 d-flex align-items-center">
                 <img
