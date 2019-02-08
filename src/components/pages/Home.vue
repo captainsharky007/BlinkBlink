@@ -332,7 +332,7 @@
                 <img src="~@/assets/img/quote.svg" alt="Quote">
                 <p
                   class="card-text mt-24"
-                >BlinkBlink is probably the best way how to create habit to relax your eyes.</p>
+                >BlinkBlink application is probably the easiest and best way how to create a habit to relax your eyes.</p>
                 <h5 class="card-title mb-0">Serkan Gürses</h5>
                 <small>Optometrist</small>
               </div>
@@ -429,8 +429,8 @@
               </div>
 
               <div class="col-12 col-sm-6 p-32">
-                <h1>Get free e-book. Start today.</h1>
-                <p>Some short description about this ebook.</p>
+                <h1>Free PDF<br>e-book.</h1>
+                <p>Get free exercises with illustrations and descriptions.</p>
                 <div class="form-group">
                   <input
                     type="email"
